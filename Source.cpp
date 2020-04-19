@@ -5,8 +5,6 @@
 
 int work[1000];
 std::string answ;
-char alph[26] = { 'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z' };
-
 
 void binary() {
 	for (std::size_t i = 0; i < answ.size(); i++) {
@@ -18,26 +16,23 @@ void hexa() {
 		//Converts to ascii decimal number and then outputs hexadecimal
 		work[i] = int(answ[i]);
 		std::cout << std::hex << work[i] << " ";
-		
-		
-
 	}
 	std::cout << std::endl;
 }
-
-
 int main() {
-	std::cout << "Input text: ";
-	std::cin >> answ;
 	std::cout << "Binary?Y/N: ";
 	std::cin >> answ;
 	if (answ == "Y" || answ == "y") {
+		std::cout << "Input text: ";
+		std::cin >> answ;
 		binary();
 	}
 	if (answ == "N" || answ == "n") {
+		std::cout << "Input text: ";
+		std::cin >> answ;
 		hexa();
 	}
 	std::cout << "Done" << std::endl;
-	system("pause");
+	std::cin >> answ;
 
 }
